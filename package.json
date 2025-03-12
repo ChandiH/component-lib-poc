@@ -1,12 +1,22 @@
 {
-  "name": "component-lib-poc",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@chandimal/component-lib-poc",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
-  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
   "files": [
     "dist"
   ],
