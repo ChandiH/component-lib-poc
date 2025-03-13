@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from '../../../src/components/ui/Button';  // Import the actual component
+import { Button } from '../../../src/components/ui/Button'; // Import the actual component
 import '../../../src/index.css';
 
 const meta: Meta<typeof Button> = {
@@ -8,11 +8,18 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       control: 'select',
-      options: ["default", "destructive", "outline", "secondary", "ghost", "link"],
+      options: [
+        'default',
+        'destructive',
+        'outline',
+        'secondary',
+        'ghost',
+        'link',
+      ],
     },
     size: {
       control: 'select',
-      options: ["default", "sm", "lg", "icon"],
+      options: ['default', 'sm', 'lg', 'icon'],
     },
     disabled: { control: 'boolean' },
     onClick: { action: 'clicked' },
@@ -26,9 +33,9 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   args: {
     children: 'Primary Button',
-    variant: "default",
+    variant: 'default',
     disabled: false,
-    size: "default",
+    size: 'default',
   },
 };
 

@@ -1,0 +1,13 @@
+.storybook
+node_modules
+dist
+public
+examples
+
+*.md
+*.mdx
+*.css
+
+tsconfig.json
+package-lock.json
+tailwind.config.js
