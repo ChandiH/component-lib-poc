@@ -26,7 +26,7 @@
     "build": "tsc && vite build && npm run build:styles",
     "build:styles": "postcss ./src/index.css -o ./dist/style.css",
     "lint": "eslint src stories",
-    "format": "prettier --write \"src/**/*.{ts,tsx}\"",
+    "format": "prettier --write \"src/**/*.{ts,tsx}\" \"stories/**/*.{ts,tsx}\"",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
