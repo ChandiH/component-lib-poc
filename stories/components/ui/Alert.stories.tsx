@@ -4,7 +4,7 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from '../../../src/components/ui/Alerts'; // Import the actual component
+} from '../../../src/components/ui'; // Import the actual component
 import { ComponentProps } from 'react';
 
 type StoryProps = ComponentProps<typeof Alert>;

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-import { Button } from '../../../src/components/ui/Button'; // Import the actual component
+import { Button } from '../../../src/components/ui'; // Import the actual component
 import '../../../src/index.css';
 
 const meta: Meta<typeof Button> = {
