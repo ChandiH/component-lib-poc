@@ -7,6 +7,8 @@ import { DataTableColumnHeader } from './data-table-column-header';
 import { DataTableRowActions } from './data-table-row-actions';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '../../../ui';
 
+export type DefColumn = ColumnDef<IPipeline>;
+
 export const columns: ColumnDef<IPipeline>[] = [
   {
     accessorKey: 'id',

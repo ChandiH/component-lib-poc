@@ -11,16 +11,19 @@ import { DataTableFacetedFilter } from './data-table-faceted-filter';
 
 interface DataTableToolbarProps<TData> {
   table: Table<TData>;
+  title?: string;
 }
 
 export function DataTableToolbar<TData>({
   table,
+  title
 }: DataTableToolbarProps<TData>) {
   const isFiltered = table.getState().columnFilters.length > 0;
 
   return (
     <div className="flex items-center justify-between">
       <div className="flex flex-1 items-center space-x-2">
+        {title && (<div className='text-2xl'>{title}</div>)}
         <Input
           placeholder="Filter source..."
           value={(table.getColumn('source')?.getFilterValue() as string) ?? ''}
