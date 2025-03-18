@@ -1,2 +1,2 @@
-export * from './components/ui/Button';
-export * from './components/ui/Alerts';
+export * from './components/ui';
+export * from './components/composite';
