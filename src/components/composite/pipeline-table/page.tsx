@@ -3,17 +3,17 @@ import { z } from 'zod';
 import { columns } from './components/columns';
 import { DataTable } from './components/data-table';
 // import { UserNav } from "./components/user-nav"
-import { taskSchema } from './data/schema';
-import { TaskData } from './data/tasks';
+import { PipelineSchema } from './data/schema';
+import { PipelineData } from './data/tasks';
 
 // Simulate a database read for tasks.
 async function getTasks() {
-  const tasks = TaskData;
+  const tasks = PipelineData;
 
-  return z.array(taskSchema).parse(tasks);
+  return z.array(PipelineSchema).parse(tasks);
 }
 
-export default async function TaskPage() {
+export default async function PipelinePage() {
   const tasks = await getTasks();
 
   return (
