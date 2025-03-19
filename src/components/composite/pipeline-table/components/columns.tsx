@@ -118,22 +118,22 @@ export const columns: ColumnDef<IPipeline>[] = [
     ),
     cell: ({ row }) => {
       const stages: IStage[] = row.getValue('stages');
-      const getStageIcon = (stage: IStage) =>
-        statuses.find((s) => s.value === stage.status)?.icon || null;
+      const getStage = (stage: IStage) =>
+        statuses.find((s) => s.value === stage.status) || null;
 
       return (
         <div className="flex space-x-2">
           <span className="max-w-[500px] truncate font-medium flex">
             {stages?.map((stage) => {
-              const Icon = getStageIcon(stage);
+              const Stage = getStage(stage);
               return (
-                Icon && (
+                Stage && (
                   <HoverCard>
                     <HoverCardTrigger>
-                      <Icon className="mr-2 h-4 w-4 text-muted-foreground" />
+                      <Stage.icon className="mr-2 h-4 w-4 text-muted-foreground" />
                     </HoverCardTrigger>
                     <HoverCardContent className="w-auto">
-                      {stage.name}
+                      {`${stage.name} : ${Stage.label}`}
                     </HoverCardContent>
                   </HoverCard>
                 )
@@ -157,10 +157,12 @@ export const columns: ColumnDef<IPipeline>[] = [
           {
             name: 'run',
             event: (row: IPipeline) => console.log('run', row),
+            disabled: true,
           },
           {
             name: 'deploy',
             event: (row: IPipeline) => console.log('deploy', row),
+            disabled: false,
           },
         ]}
       />

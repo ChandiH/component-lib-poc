@@ -19,6 +19,7 @@ export const PipelineSchema = z.object({
 export const ActionSchema = z.object({
   name: z.string(),
   event: z.function().args(z.any()).returns(z.void()),
+  disabled: z.boolean().optional().default(false),
 });
 
 export type IPipeline = z.infer<typeof PipelineSchema>;

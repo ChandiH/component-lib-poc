@@ -39,6 +39,7 @@ export function DataTableRowActions<TData>({
           <DropdownMenuItem
             onClick={() => action.event(task)}
             className="capitalize"
+            disabled={action.disabled}
           >
             {action.name}
           </DropdownMenuItem>

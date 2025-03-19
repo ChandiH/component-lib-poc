@@ -3,7 +3,7 @@ import { IPipeline } from './schema';
 export const PipelineData: IPipeline[] = [
   {
     id: 'pipe_001',
-    status: 'completed',
+    status: 'success',
     source: 'github',
     webUrl: 'https://example.com/pipelines/001',
     createdAt: '2025-03-01T10:00:00Z',
