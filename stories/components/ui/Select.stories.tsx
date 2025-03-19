@@ -11,7 +11,8 @@ import {
   SelectSeparator,
 } from '../../../src/components/ui';
 
-type StoryProps = ComponentProps<typeof Select> & ComponentProps<typeof SelectContent>;
+type StoryProps = ComponentProps<typeof Select> &
+  ComponentProps<typeof SelectContent>;
 
 const meta: Meta<StoryProps> = {
   title: 'Components/Select',
@@ -171,9 +172,9 @@ export const CustomPositioning: Story = {
 export const Trigger: Story = {
   render: (args) => (
     <Select {...args}>
-    <SelectTrigger className="w-[180px]">
-      <SelectValue placeholder="Select an option" />
-    </SelectTrigger>
+      <SelectTrigger className="w-[180px]">
+        <SelectValue placeholder="Select an option" />
+      </SelectTrigger>
     </Select>
   ),
   name: 'Select Trigger',

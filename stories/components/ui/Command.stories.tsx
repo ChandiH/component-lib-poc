@@ -94,9 +94,7 @@ export const Interactive: Story = {
         <CommandList>
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Fruits">
-            <CommandItem onSelect={() => setValue('apple')}>
-              Apple
-            </CommandItem>
+            <CommandItem onSelect={() => setValue('apple')}>Apple</CommandItem>
             <CommandItem onSelect={() => setValue('banana')}>
               Banana
             </CommandItem>
@@ -124,7 +122,8 @@ export const Input: Story = {
   render: () => (
     <Command className="rounded-lg border shadow-md">
       <CommandInput placeholder="Search..." />
-    </Command>),
+    </Command>
+  ),
   name: 'Command Input',
 };
 
@@ -132,13 +131,14 @@ export const Empty: Story = {
   render: () => (
     <Command className="rounded-lg border shadow-md">
       <CommandEmpty>No results found.</CommandEmpty>
-    </Command>),
-  name: 'Command Empty',  
+    </Command>
+  ),
+  name: 'Command Empty',
 };
 
 export const ItemWithShortcut: Story = {
   render: () => (
-    <Command className='rounded-lg border shadow-md'>
+    <Command className="rounded-lg border shadow-md">
       <CommandItem>
         Profile
         <CommandShortcut>⌘P</CommandShortcut>

@@ -16,14 +16,14 @@ interface DataTableToolbarProps<TData> {
 
 export function DataTableToolbar<TData>({
   table,
-  title
+  title,
 }: DataTableToolbarProps<TData>) {
   const isFiltered = table.getState().columnFilters.length > 0;
 
   return (
     <div className="flex items-center justify-between">
       <div className="flex flex-1 items-center space-x-2">
-        {title && (<div className='text-2xl'>{title}</div>)}
+        {title && <div className="text-2xl">{title}</div>}
         <Input
           placeholder="Filter source..."
           value={(table.getColumn('source')?.getFilterValue() as string) ?? ''}

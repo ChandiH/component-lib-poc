@@ -19,7 +19,7 @@ interface DataTableRowActionsProps<TData> {
 
 export function DataTableRowActions<TData>({
   row,
-  actions
+  actions,
 }: DataTableRowActionsProps<TData>) {
   const task = PipelineSchema.parse(row.original);
 
@@ -36,7 +36,12 @@ export function DataTableRowActions<TData>({
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[160px]">
         {actions.map((action) => (
-          <DropdownMenuItem onClick={() => action.event(task)} className='capitalize'>{action.name}</DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => action.event(task)}
+            className="capitalize"
+          >
+            {action.name}
+          </DropdownMenuItem>
         ))}
       </DropdownMenuContent>
     </DropdownMenu>

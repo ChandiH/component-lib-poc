@@ -9,7 +9,8 @@ import {
 import { Button } from '../../../src/components/ui';
 import { Input } from '../../../src/components/ui';
 
-type StoryProps = ComponentProps<typeof Popover> & ComponentProps<typeof PopoverContent>;
+type StoryProps = ComponentProps<typeof Popover> &
+  ComponentProps<typeof PopoverContent>;
 
 const meta: Meta<StoryProps> = {
   title: 'Components/Popover',
@@ -34,11 +35,11 @@ export const Default: Story = {
 
     return (
       <div className="flex justify-center p-8">
-        <Popover open={open} onOpenChange={setOpen} {...args} >
+        <Popover open={open} onOpenChange={setOpen} {...args}>
           <PopoverTrigger asChild>
             <Button variant="outline">Open Popover</Button>
           </PopoverTrigger>
-          <PopoverContent side={args.side} >
+          <PopoverContent side={args.side}>
             <div className="space-y-2">
               <h4 className="font-medium">Popover Title</h4>
               <p className="text-sm text-muted-foreground">
@@ -107,9 +108,7 @@ export const SideVariations: Story = {
           <PopoverTrigger asChild>
             <Button variant="outline">Top</Button>
           </PopoverTrigger>
-          <PopoverContent side="top">
-            This appears on top
-          </PopoverContent>
+          <PopoverContent side="top">This appears on top</PopoverContent>
         </Popover>
 
         <div className="flex gap-8">
@@ -117,18 +116,14 @@ export const SideVariations: Story = {
             <PopoverTrigger asChild>
               <Button variant="outline">Left</Button>
             </PopoverTrigger>
-            <PopoverContent side="left">
-              This appears on left
-            </PopoverContent>
+            <PopoverContent side="left">This appears on left</PopoverContent>
           </Popover>
 
           <Popover open={openRight} onOpenChange={setOpenRight} {...args}>
             <PopoverTrigger asChild>
               <Button variant="outline">Right</Button>
             </PopoverTrigger>
-            <PopoverContent side="right">
-              This appears on right
-            </PopoverContent>
+            <PopoverContent side="right">This appears on right</PopoverContent>
           </Popover>
         </div>
 
@@ -136,9 +131,7 @@ export const SideVariations: Story = {
           <PopoverTrigger asChild>
             <Button variant="outline">Bottom</Button>
           </PopoverTrigger>
-          <PopoverContent side="bottom">
-            This appears on bottom
-          </PopoverContent>
+          <PopoverContent side="bottom">This appears on bottom</PopoverContent>
         </Popover>
       </div>
     );

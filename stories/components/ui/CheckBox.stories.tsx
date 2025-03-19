@@ -10,9 +10,7 @@ const meta: Meta<StoryProps> = {
   title: 'Components/CheckBox',
   tags: ['autodocs'],
   component: CheckBox,
-  argTypes: {
-    
-  },
+  argTypes: {},
   args: {
     onClick: fn(),
   },
@@ -27,4 +25,3 @@ export const Primary: Story = {
     children: 'Primary CheckBox',
   },
 };
-

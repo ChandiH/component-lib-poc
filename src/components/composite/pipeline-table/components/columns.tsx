@@ -69,13 +69,16 @@ export const columns: ColumnDef<IPipeline>[] = [
     cell: ({ row }) => {
       return (
         <div className="flex space-x-2">
-          <a className="max-w-[500px] truncate font-medium hover:text-primary" href={row.getValue('webUrl')}>
+          <a
+            className="max-w-[500px] truncate font-medium hover:text-primary"
+            href={row.getValue('webUrl')}
+          >
             {row.getValue('webUrl')}
           </a>
         </div>
       );
     },
-    enableSorting: false, 
+    enableSorting: false,
   },
   {
     accessorKey: 'createdAt',
@@ -106,7 +109,7 @@ export const columns: ColumnDef<IPipeline>[] = [
         </div>
       );
     },
-    enableSorting: false, 
+    enableSorting: false,
   },
   {
     accessorKey: 'stages',
@@ -115,44 +118,52 @@ export const columns: ColumnDef<IPipeline>[] = [
     ),
     cell: ({ row }) => {
       const stages: IStage[] = row.getValue('stages');
-      const getStageIcon = (stage: IStage) => 
-        statuses.find(s => s.value === stage.status)?.icon || null;
-    
+      const getStageIcon = (stage: IStage) =>
+        statuses.find((s) => s.value === stage.status)?.icon || null;
+
       return (
         <div className="flex space-x-2">
           <span className="max-w-[500px] truncate font-medium flex">
-            {stages?.map(stage => {
+            {stages?.map((stage) => {
               const Icon = getStageIcon(stage);
-              return Icon && (
-                <HoverCard>
-                  <HoverCardTrigger>
-                    <Icon className="mr-2 h-4 w-4 text-muted-foreground" />
-                  </HoverCardTrigger>
-                  <HoverCardContent className="w-auto">
-                    {stage.name}
-                  </HoverCardContent>
-                </HoverCard>);
+              return (
+                Icon && (
+                  <HoverCard>
+                    <HoverCardTrigger>
+                      <Icon className="mr-2 h-4 w-4 text-muted-foreground" />
+                    </HoverCardTrigger>
+                    <HoverCardContent className="w-auto">
+                      {stage.name}
+                    </HoverCardContent>
+                  </HoverCard>
+                )
+              );
             })}
           </span>
         </div>
       );
     },
-    enableSorting: false, 
+    enableSorting: false,
   },
   {
     id: 'actions',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Actions" />
     ),
-    cell: ({ row }) => <DataTableRowActions row={row} actions={[
-      {
-        name: "run",
-        event: (row: IPipeline) => console.log("run", row)
-      },
-      {
-        name: "deploy",
-        event: (row: IPipeline) => console.log("deploy", row)      
-      }
-    ]}/>,
+    cell: ({ row }) => (
+      <DataTableRowActions
+        row={row}
+        actions={[
+          {
+            name: 'run',
+            event: (row: IPipeline) => console.log('run', row),
+          },
+          {
+            name: 'deploy',
+            event: (row: IPipeline) => console.log('deploy', row),
+          },
+        ]}
+      />
+    ),
   },
 ];

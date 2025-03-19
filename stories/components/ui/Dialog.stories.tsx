@@ -167,7 +167,7 @@ export const CustomSize: Story = {
     const [open, setOpen] = useState(false);
 
     return (
-      <Dialog open={open} onOpenChange={setOpen} >
+      <Dialog open={open} onOpenChange={setOpen}>
         <DialogTrigger asChild>
           <Button variant="outline">Open Large Dialog</Button>
         </DialogTrigger>

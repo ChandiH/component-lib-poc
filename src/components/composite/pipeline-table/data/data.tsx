@@ -1,15 +1,10 @@
-import {
-  Timer,
-  CircleCheckBig,
-  CircleX,
-  CircleDashed
-} from 'lucide-react';
+import { Timer, CircleCheckBig, CircleX, CircleDashed } from 'lucide-react';
 
 export const statuses = [
   {
-    value: "pending",
-    label: "Pending",
-    icon: CircleDashed
+    value: 'pending',
+    label: 'Pending',
+    icon: CircleDashed,
   },
   {
     value: 'running',
@@ -22,8 +17,8 @@ export const statuses = [
     icon: CircleX,
   },
   {
-    value: "success",
-    label: "Success",
-    icon: CircleCheckBig
-  }
+    value: 'success',
+    label: 'Success',
+    icon: CircleCheckBig,
+  },
 ];

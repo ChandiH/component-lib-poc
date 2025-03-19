@@ -121,7 +121,7 @@ export const WithInteractiveItems: Story = {
 // With Groups
 export const WithGroups: Story = {
   render: (props) => (
-    <DropdownMenu {...props} >
+    <DropdownMenu {...props}>
       <DropdownMenuTrigger asChild>
         <Button variant="outline">Open Menu</Button>
       </DropdownMenuTrigger>
@@ -147,7 +147,7 @@ export const CheckboxItem: Story = {
   render: (props) => {
     const [checked, setChecked] = useState(false);
     return (
-      <DropdownMenu {...props} >
+      <DropdownMenu {...props}>
         <DropdownMenuTrigger asChild>
           <Button variant="outline">Open Menu</Button>
         </DropdownMenuTrigger>
@@ -167,7 +167,7 @@ export const CheckboxItem: Story = {
 
 export const RadioItem: Story = {
   render: (props) => (
-    <DropdownMenu {...props} >
+    <DropdownMenu {...props}>
       <DropdownMenuTrigger asChild>
         <Button variant="outline">Open Menu</Button>
       </DropdownMenuTrigger>
@@ -175,24 +175,24 @@ export const RadioItem: Story = {
         <DropdownMenuRadioItem value="item">Radio Item</DropdownMenuRadioItem>
       </DropdownMenuContent>
     </DropdownMenu>
-    ),
+  ),
   name: 'Dropdown Radio Item',
 };
 
 export const Submenu: Story = {
   render: (props) => (
-    <DropdownMenu {...props} >
+    <DropdownMenu {...props}>
       <DropdownMenuTrigger asChild>
         <Button variant="outline">Open Menu</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-    <DropdownMenuSub>
-      <DropdownMenuSubTrigger>Submenu</DropdownMenuSubTrigger>
-      <DropdownMenuSubContent>
-        <DropdownMenuItem>Sub Item 1</DropdownMenuItem>
-        <DropdownMenuItem>Sub Item 2</DropdownMenuItem>
-      </DropdownMenuSubContent>
-    </DropdownMenuSub>
+        <DropdownMenuSub>
+          <DropdownMenuSubTrigger>Submenu</DropdownMenuSubTrigger>
+          <DropdownMenuSubContent>
+            <DropdownMenuItem>Sub Item 1</DropdownMenuItem>
+            <DropdownMenuItem>Sub Item 2</DropdownMenuItem>
+          </DropdownMenuSubContent>
+        </DropdownMenuSub>
       </DropdownMenuContent>
     </DropdownMenu>
   ),

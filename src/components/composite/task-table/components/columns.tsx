@@ -2,7 +2,7 @@ import React from 'react';
 import { ColumnDef } from '@tanstack/react-table';
 
 import { Badge } from '../../../ui';
-import { Checkbox } from '../../../ui';
+import { CheckBox } from '../../../ui';
 
 import { labels, priorities, statuses } from '../data/data';
 import { Task } from '../data/schema';
@@ -13,7 +13,7 @@ export const columns: ColumnDef<Task>[] = [
   {
     id: 'select',
     header: ({ table }) => (
-      <Checkbox
+      <CheckBox
         checked={
           table.getIsAllPageRowsSelected() ||
           (table.getIsSomePageRowsSelected() && 'indeterminate')
@@ -24,7 +24,7 @@ export const columns: ColumnDef<Task>[] = [
       />
     ),
     cell: ({ row }) => (
-      <Checkbox
+      <CheckBox
         checked={row.getIsSelected()}
         onCheckedChange={(value) => row.toggleSelected(!!value)}
         aria-label="Select row"

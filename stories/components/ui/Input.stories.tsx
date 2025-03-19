@@ -64,9 +64,7 @@ export const Controlled: Story = {
 
 // Disabled State
 export const Disabled: Story = {
-  render: (args) => (
-    <Input {...args} disabled placeholder="Disabled input" />
-  ),
+  render: (args) => <Input {...args} disabled placeholder="Disabled input" />,
 };
 
 // With Label
@@ -85,21 +83,9 @@ export const WithLabel: Story = {
 export const Sizes: Story = {
   render: (args) => (
     <div className="space-y-4">
-      <Input
-        {...args}
-        className="h-8 text-sm"
-        placeholder="Small input"
-      />
-      <Input
-        {...args}
-        className="h-9 text-base"
-        placeholder="Default input"
-      />
-      <Input
-        {...args}
-        className="h-10 text-lg"
-        placeholder="Large input"
-      />
+      <Input {...args} className="h-8 text-sm" placeholder="Small input" />
+      <Input {...args} className="h-9 text-base" placeholder="Default input" />
+      <Input {...args} className="h-10 text-lg" placeholder="Large input" />
     </div>
   ),
 };

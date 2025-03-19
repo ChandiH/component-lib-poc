@@ -12,12 +12,7 @@ const meta: Meta<StoryProps> = {
   argTypes: {
     variant: {
       control: 'select',
-      options: [
-        'default',
-        'secondary',
-        'destructive',
-        'outline',
-      ],
+      options: ['default', 'secondary', 'destructive', 'outline'],
     },
   },
 };
@@ -32,4 +27,3 @@ export const Primary: Story = {
     variant: 'default',
   },
 };
-

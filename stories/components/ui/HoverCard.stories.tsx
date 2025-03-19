@@ -91,9 +91,7 @@ export const SideVariations: Story = {
             Top (default)
           </span>
         </HoverCardTrigger>
-        <HoverCardContent side="top">
-          This appears on top
-        </HoverCardContent>
+        <HoverCardContent side="top">This appears on top</HoverCardContent>
       </HoverCard>
 
       <HoverCard {...args}>
@@ -114,9 +112,7 @@ export const SideVariations: Story = {
               Left
             </span>
           </HoverCardTrigger>
-          <HoverCardContent side="left">
-            This appears on left
-          </HoverCardContent>
+          <HoverCardContent side="left">This appears on left</HoverCardContent>
         </HoverCard>
 
         <HoverCard {...args}>
@@ -147,7 +143,9 @@ export const CustomDelay: Story = {
         <HoverCardContent>
           <div className="space-y-2">
             <h4 className="text-sm font-semibold">Custom Delay</h4>
-            <p className="text-sm">This hover card has custom open/close delays</p>
+            <p className="text-sm">
+              This hover card has custom open/close delays
+            </p>
           </div>
         </HoverCardContent>
       </HoverCard>
